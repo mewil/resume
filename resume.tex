@@ -1,9 +1,10 @@
-\documentclass[]{template} 
+\documentclass[]{template}
 \usepackage{enumitem}
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
 
 \begin{document}
 
-\header{michael }{wilson}{student, developer, creator}
+\header{michael }{wilson}{student, developer, creator\\}
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
@@ -13,17 +14,16 @@
 \section{contact}
 mewil@umich.edu
 mwilson.io
-+1 248 514 4158
+248-514-4158
 \section{languages}
 english - fluent
 french - proficient
 \section{programming}
-Go, C, C++, JavaScript, Python, Swift, \& R
-HTML, CSS, \& LaTeX
+Go, C++, JavaScript, Python, Swift, SQL, HTML, CSS, \& LaTeX
 \section{frameworks \& libraries}
-Qt, Node, React, Redux, React Native, Express, NLTK, \& MongoDB
+Qt, Elasticsearch, Node.js, React.js, Redux, React Native, NLTK, Express.js, Redis, PosgreSQL, \& MongoDB
 \section{tools}
-Docker, Git, Sketch, Linux, Xcode, Final Cut Pro, Apple Motion, Postman, Adobe Lightroom, Microsoft Office, \& WordPress
+Docker, Git, Sketch, Linux, Xcode, VirtualBox, Final Cut Pro, Apple Motion, Postman, \& Adobe Lightroom
 \end{aside}
 
 
@@ -38,56 +38,62 @@ Docker, Git, Sketch, Linux, Xcode, Final Cut Pro, Apple Motion, Postman, Adobe L
 %------------------------------------------------
 
 \entry
-{2017--Now}
-{MHacks Core Team  - \normalfont{mhacks.org}}
-{Ann Arbor, MI}
-{\emph{Tech Lead and Software Developer}\\
-Manage the tech subteam for the University of Michigan's biannual hackathon, MHacks\\
-Iterate on the MHacks mobile apps and website to provide a great experience to attendees\\
-Facilitate registration and event logistics before and during the event\\}
+{Trove - \normalfont{trove.com}}
+{2018 - Present - Ann Arbor, MI}
+{
+Develop and test transformative feature sets of professional networking web apps using React.js and Redux\\
+Integrate analytics software to measure and learn from user interaction and engagement\\
+Engage in Agile Software Development including daily standups and weekly sprint planning}
 
 %------------------------------------------------
 
 \entry
-{2017--Now}
 {Michigan eXploration Lab  - \normalfont{exploration.engin.umich.edu}}
-{Ann Arbor, MI}
-{\emph{Software Developer}\\
+{2017 - Present - Ann Arbor, MI}
+{
 Develop groundstation and flight software for cube satellites including TBEx (Tandem Beacon Experiment)\\
-Work includes writing and testing payload monitor and file uplink handler code and testing such groundstation features with the TBEx Engineering Development Unit\\}
+Write and test TBEx payload driver and file uplink code\\
+Evaluate groundstation features with the TBEx Engineering Development Unit test satellite\\
+Develop an aggregate data server for storing and analyzing cube satellite data sourced from groundstations}
 
 %------------------------------------------------
 
 \entry
-{2016--Now}
-{Athenian Labs  - \normalfont{athenianlabs.com}}
-{Bloomfield, MI}
-{\emph{Founder, Developer, Photographer}\\
-Develop mobile and web social media applications to connect nearby college students\\
-Market and sell photographs using social media (over 8K followers on instagram)\\
-Create captivating aerial videos to market real estate and sporting competitions\\
-}
+{MHacks Core Team  - \normalfont{mhacks.org}}
+{2017 - Present - Ann Arbor, MI}
+{
+Manage the tech subteam for the University of Michigan's biannual hackathon, MHacks\\
+Iterate on the MHacks mobile apps and website to provide an optimal attendee experience\\
+Supervise registration and event logistics before and during the event}
 
 %------------------------------------------------
 
 \entry
-{2016}
+{Athenian Labs, LLC  - \normalfont{athenianlabs.com}}
+{2016 - Present - Ann Arbor, MI}
+{
+Develop mobile and web social media applications to connect college students\\
+Market and sell photographs using social media (over 8K followers on Instagram)\\
+Create captivating aerial videos to market real estate and sporting competitions}
+
+%------------------------------------------------
+
+\entry
 {Drone Brothers  - \normalfont{dronebros.com}}
-{Detroit, MI}
-{\emph{Web Developer, Producer, and Pilot}\\
-Piloted drones to capture aerial video and photographs for clients\\
-Developed the company website to showcase the services offered\\
-Edited and produced aerial video, photographs, panoramas, and 3D maps to advertise and promote real estate\\}
+{2016 - Detroit, MI}
+{
+Pilot drones to capture aerial video and photographs for commerical and residential real estate clients\\
+Develop company website to showcase the services offered\\
+Edit and produce promotional aerial video, photographs, panoramas, and 3D maps}
 
 %------------------------------------------------
 
 \entry
-{2015}
 {The Robot Garage  - \normalfont{therobotgarage.com}}
-{Birmingham, MI}
-{\emph{Sales and Education Associate}\\
-Taught robotics and programming to children at a local robotics store and education center\\
-Managed groups of campers at summer programming camp}
+{2015 - Birmingham, MI}
+{
+Teach robotics and programming to children at a local robotics store and education center\\
+Supervise student groups at summer programming camp}
 
 %------------------------------------------------
 
@@ -104,19 +110,29 @@ Managed groups of campers at summer programming camp}
 %------------------------------------------------
 
 \entry
-{2016--Now}
 {University of Michigan}
-{Ann Arbor, MI}
+{2016 - Present - Ann Arbor, MI}
 {B.S. in Computer Science and Cognitive Science\\
-\textbf{Involvement:}
+Involvement
 \begin{itemize}[leftmargin=10pt, itemsep=-9pt, topsep=-8.5pt]
 	\item Kappa Theta Pi - Serve on technical and professional development commitees in the world's first professional technology fraternity\\
 	\item Michigan Hackers Core Team - Develop the organization's website and participate in community "hacknight" events with other Michigan students to teach and learn new skills \\
 	\item Michigan Student Artificial Intelligence Lab - Read and discuss scholarly works on topics in artificial intelligence and machine learning\\
 
 \end{itemize}
-\textbf{Coursework:}
-Data Structures and Algorithms, Operating Systems, Computational Linguistics, Introduction to Computer Architecture, \& Foundations of Computing
+Coursework:
+Data Structures and Algorithms, Operating Systems, Computational Linguistics, Introduction
+\tab to Computer Architecture, and Foundations of Computation
+}
+
+%------------------------------------------------
+
+\entry
+{Cranbrook School}
+{2012 - 2016 - Bloomfield Hills, MI}
+{
+State Championship Varsity Lacrosse Team, Varsity Ice Hockey Team with Academic Achievement Award,
+\tab State Finalist Robotics Team
 }
 
 
@@ -130,9 +146,9 @@ Data Structures and Algorithms, Operating Systems, Computational Linguistics, In
 
 \section{skills \& interests}
 
-\textbf{FAA registered UAV pilot}\\
+\textbf{FAA-registered UAV pilot}\\
 \textbf{Designed and built a quadcopter drone using a Raspberry Pi computer}\\
-\textbf{Interests:} machine learning, distributed computing systems, data science, neuroscience, psychology, aerospace engineering, photography, \& videography
+\textbf{Interests:} machine learning, distributed systems, neuroscience, aerospace, photography, \& videography
 %----------------------------------------------------------------------------------------
 
 \end{document}

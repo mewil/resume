@@ -17,9 +17,8 @@
 
 \definecolor{white}{RGB}{255,255,255}
 
-\definecolor{darkgray}{HTML}{333333}
+\definecolor{darkgray}{HTML}{222222}
 \definecolor{gray}{HTML}{404040}
-\definecolor{lightgray}{HTML}{999999}
 
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FFC72C}
@@ -51,7 +50,7 @@
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
 \newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\thinfont[]{Helvetica Neue}
 \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
@@ -141,12 +140,12 @@
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
-  #1&\parbox[t]{13.5cm}{%
-    \textbf{#2}%
+\newcommand{\entry}[3]{%
+  &\parbox[t]{16cm}{%
+    \textbf{#1}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{.25cm}%
+    {\small\addfontfeature{Color=darkgray} #2}\\%
+    #3\vspace{.25cm}%
   }\\}
 
 %%%%%%%%%%%%%%
@@ -178,12 +177,12 @@
 \RequirePackage[left=1cm,top=1.75cm,right=5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
 \hypersetup{
-    colorlinks=false,       
-    linkcolor=red,          
-    citecolor=red,        
-    filecolor=red,      
+    colorlinks=false,
+    linkcolor=red,
+    citecolor=red,
+    filecolor=red,
     urlcolor = red}
-    
+
 \makeatletter
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}
 \makeatother
