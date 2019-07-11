@@ -145,7 +145,7 @@
     \textbf{#1}%
     \hfill%
     {\small\addfontfeature{Color=darkgray} #2}\\%
-    #3\vspace{.25cm}%
+    #3\vspace{.35cm}%
   }\\}
 
 %%%%%%%%%%%%%%
