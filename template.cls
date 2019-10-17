@@ -49,12 +49,12 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\newfontfamily\bodyfont[]{SF Pro Display}
+\newfontfamily\thinfont[]{SF Pro Display}
+\newfontfamily\headingfont[]{SF Pro Display Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmainfont[Mapping=tex-text, Color=textcolor]{SF Pro Display Light}
 
 %\setmathfont{XITS Math}
 
@@ -115,9 +115,9 @@
 }
 
 \renewcommand{\subsection}[1]{
-  \par\vspace{-.5cm}%
+  \par\vspace{.5cm}%
   {\Large\headingfont\color{headercolor} #1}
-  \par\vspace{-.25cm}%
+  \par\vspace{.25cm}%
 }
 
 \renewcommand{\subsubsection}[2]{
@@ -145,7 +145,7 @@
     \textbf{#1}%
     \hfill%
     {\small\addfontfeature{Color=darkgray} #2}\\%
-    #3\vspace{.35cm}%
+    #3\vspace{.45cm}%
   }\\}
 
 %%%%%%%%%%%%%%
