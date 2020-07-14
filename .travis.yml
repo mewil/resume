@@ -1,0 +1,17 @@
+jobs:
+    include:
+      - stage: deploy
+        branches:
+        only:
+            - master
+        before_install:
+            - sudo apt-get install texlive texlive-latex-extra texlive-math-extra texlive-xetex fonts-lmodern
+            - mkdir ~/.fonts
+            - git clone https://github.com/mewil/San-Francisco-Pro-Fonts ~/.fonts
+            - sudo fc-cache -f -v
+            - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            - unzip awscliv2.zip
+            - sudo ./aws/install
+        script:
+            - xelatex resume.tex && xelatex resume.tex
+            - aws s3 cp --acl "public-read" --endpoint=$SPACES_URL resume.pdf s3://mewil-cdn/michael-wilson-resume.pdf
