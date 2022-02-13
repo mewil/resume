@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up dependencies
+        run: |
+          sudo apt-get install -y git texlive-latex-extra texlive-xetex fontconfig
+          mkdir ~/.fonts
+          git clone https://github.com/mewil/San-Francisco-Pro-Fonts ~/.fonts
+          sudo fc-cache -f -v
+
+      - name: Build resume
+        run: xelatex resume.tex && xelatex resume.tex
+
+      - name: Upload resume
+        run: aws s3 cp --acl "public-read" --region=$REGION --endpoint=$ENDPOINT resume.pdf s3://mewil-cdn/michael-wilson-resume.pdf
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENDPOINT: ${{ secrets.ENDPOINT }}
+          REGION: ${{ secrets.REGION }}
